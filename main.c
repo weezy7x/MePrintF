@@ -3,25 +3,17 @@
 int main() {
 
 
-    int n = -125;
+    unsigned int big = 4000000000U;
     //char *str2 = {"ZACK"};
 
 
     printf("\nTest avec printf:\n");
-    printf("Caractère: %d\n", n);
+    printf("Caractère: %u\n", big);
     
     printf("\nTest avec ft_printf:\n");
-    ft_printf("Caractère: %d\n", n);
+    ft_printf("Caractère: %u\n", big);
 
-    int j = 0x12;
 
-    printf("\nTest avec printf:\n");
-    printf("Caractère: %i\n", n);
-    printf("Caractère: %i\n", j);
-
-    printf("\nTest avec ft_printf:\n");
-    ft_printf("Caractère: %i\n", n);
-    ft_printf("Caractère: %i\n", j);
 
     return 0;
 }

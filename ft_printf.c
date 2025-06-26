@@ -45,6 +45,10 @@ int ft_printf(const char *type, ...) {
             else if(type[i] == 'i'){
                 int n = va_arg(args, int);
                 count += ft_printf_i(n);
+            }
+            else if(type[i] == 'u'){
+                unsigned int n = va_arg(args, unsigned int);
+                count += ft_printf_u(n);
             }else if (type[i] == '%') {
                 // Gérer le cas %%
                 count += ft_printf_c('%');
