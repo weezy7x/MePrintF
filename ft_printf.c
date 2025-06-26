@@ -49,9 +49,16 @@ int ft_printf(const char *type, ...) {
             else if(type[i] == 'u'){
                 unsigned int n = va_arg(args, unsigned int);
                 count += ft_printf_u(n);
+            }else if(type[i] == 'x'){
+                unsigned int n = va_arg(args, unsigned int);
+                count += ft_printf_x(n,0);
+            }else if(type[i] == 'X'){
+                unsigned int n = va_arg(args, unsigned int);
+                count += ft_printf_x(n,1);
             }else if (type[i] == '%') {
                 // Gérer le cas %%
                 count += ft_printf_c('%');
+
             }
             else {
                 // Spécificateur non géré, imprimer tel quel
